@@ -1,7 +1,7 @@
 use rand::Rng;
 
 pub struct Card {
-    value: i16,
+    value: i32,
     num: i32,
 }
 
@@ -33,7 +33,7 @@ impl Shoe {
         return Shoe { cards, total }
     }
 
-    pub fn pop_card(&mut self) -> i16 {
+    pub fn pop_card(&mut self) -> i32 {
         let mut rng = rand::thread_rng();
         let key = rng.gen_range(0..self.total);
 
